@@ -2,16 +2,9 @@ pipeline {
  agent any
     stages
     {
-        stage('Hello')
+	stage('TestJob')
 	{
-	  agent { label 'Test' }	
-	   steps
-	   {
-	      echo "Hello World"
-	   }
-	}
-	stage('GIT')
-	{
+		agent {label 'Test'}
 	  steps
 	  {
 	    git 'https://github.com/Manjunathmba/JnekinsAssignment03.git'
@@ -20,6 +13,7 @@ pipeline {
 		
 	 post 
 	  {
+            agent {label 'Production'}
 	    success
 	     {
 	       build job : 'ProdJob'
