@@ -5,10 +5,9 @@ pipeline {
     {
 	stage('TestJob')
 	{
-	  agent {label 'Test'}
 	  steps
 	  {
-	     build job : 'TestJob'
+	     git clone 'https://github.com/Manjunathmba/JnekinsAssignment03.git'
 	    
 	  }
 	}
