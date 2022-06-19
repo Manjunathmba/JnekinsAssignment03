@@ -1,4 +1,5 @@
-pipeline {    
+pipeline {  
+ agent { label 'Test' }
     stages
     {
         stage('Hello')
