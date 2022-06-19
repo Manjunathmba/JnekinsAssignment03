@@ -7,7 +7,7 @@ pipeline {
 	{
 	  steps
 	  {
-	     checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Manjunathmba', url: 'https://github.com/Manjunathmba/JnekinsAssignment03.git']]])
+	     checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Manjunathmba/JnekinsAssignment03.git']]])
                 sh "ls -lart ./*"
 	    
 	  }
