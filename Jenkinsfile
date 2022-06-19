@@ -1,6 +1,4 @@
-pipeline {
-  agent none
-    
+pipeline {    
     stages
     {
         stage('Hello')
