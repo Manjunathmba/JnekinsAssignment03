@@ -1,5 +1,4 @@
 pipeline {  
- agent {label 'Test'}
 	options { skipDefaultCheckout() }
     stages
     {
@@ -8,7 +7,7 @@ pipeline {
 	  agent {label 'Test'}
 	  steps
 	  {
-	    git 'https://github.com/Manjunathmba/JnekinsAssignment03.git'
+	     build job : 'TestJob'
 	    
 	  }
 		
