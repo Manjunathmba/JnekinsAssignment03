@@ -20,7 +20,7 @@ pipeline {
 		
 	 post 
 	  {
-	    successs
+	    success
 	     {
 	       build job : 'ProdJob'
 	     }	 
