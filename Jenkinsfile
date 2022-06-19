@@ -17,16 +17,14 @@ pipeline {
 	    git 'https://github.com/Manjunathmba/JnekinsAssignment03.git'
 	    
 	  }
-	}
+		
 	 post 
-	    {
-	      successs
+	  {
+	    successs
 	     {
-	       node(Production)
-	       {
-		    build job : 'ProdJob'
-	       }
+	       build job : 'ProdJob'
 	     }	 
 	  }
+	}
      }
 }     
