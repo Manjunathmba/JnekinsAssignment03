@@ -4,7 +4,7 @@ pipeline {
     {
 	stage('TestJob')
 	{
-		agent {label 'Test'}
+	  agent {label 'Test'}
 	  steps
 	  {
 	    git 'https://github.com/Manjunathmba/JnekinsAssignment03.git'
@@ -13,10 +13,12 @@ pipeline {
 		
 	 post 
 	  {
-            agent {label 'Production'}
 	    success
 	     {
-	       build job : 'ProdJob'
+	     node('Production')
+		 {
+	               build job : 'ProdJob'
+		 }
 	     }	 
 	  }
 	}
