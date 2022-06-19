@@ -18,6 +18,10 @@ pipeline {
 	    
 	  }
 	}
-
+	stage 'post-build'
+	    node(Production)
+	    {
+		    build job : 'ProdJob'
+	    }
      }
 }     
