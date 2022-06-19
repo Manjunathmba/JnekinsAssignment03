@@ -1,4 +1,5 @@
 pipeline {  
+	agent {label 'Test'}
 	options { skipDefaultCheckout() }
     stages
     {
@@ -9,17 +10,6 @@ pipeline {
 	  {
 	     build job : 'TestJob'
 	    
-	  }
-		
-	 post 
-	  {
-	    success
-	     {
-	     node('Production')
-		 {
-	               build job : 'ProdJob'
-		 }
-	     }	 
 	  }
 	}
      }
