@@ -1,4 +1,9 @@
 void ()
 {
+
+}
+
+void newfeature()
+{
 }
 
