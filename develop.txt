@@ -1,6 +1,7 @@
 this is a sample file added in develop branch
 adding another sample line
 test..
+Testing the develop branch
 new line
 ....
 -----
